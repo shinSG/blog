@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script type="text/javascript">
+    var countdown=3;
+    setInterval("redict",1000);
+    function redict(){
+        if(countdown == 0){
+            location = "http://127.0.0.1:8000/user/login"
+        }
+        document.getElementById('info').innerHTML=countdown+'秒后即将跳转到登陆页面';
+        countdown--;
+    }
+</script>
+<body>
+<div>
+    {{ info }}
+    <p id="info"></p>
+</div>
+</body>
+</html>

@@ -1,10 +1,11 @@
 from django.contrib import admin
-from userinfo.models import userinfo
+from userinfo.models import UserInfo
 
 # Register your models here.
 
-class UserinfoAdmin(admin.ModelAdmin):
+
+class UserInfoAdmin(admin.ModelAdmin):
     list_display = ['nickname']
 
-admin.site.register(userinfo, UserinfoAdmin)
+admin.site.register(UserInfo, UserInfoAdmin)
 

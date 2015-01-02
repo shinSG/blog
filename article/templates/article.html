@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>{{ article.title }}</h1>
+<p>作者：{{ article.author }}</p>
+<p>发布时间：{{ article.createtime }}</p>
+<span>{{ article.favor }}</span>
+<p>
+    {{ article.content }}
+</p>
+{% for c in article.comment %}
+    {{ c.review }}
+{% empty %}
+    <p>暂无评论</p>
+{% endfor %}
+</body>
+</html>
